@@ -52,6 +52,8 @@ import albumListPage from '@/components/musicComponents/albumList/albumListPage'
 
 ///登陆界面
 import loginPage from '@/components/theNewPage/login';
+import startUp from '@/components/theNewPage/start-up';
+
 
 
 
@@ -84,7 +86,9 @@ export default new Router({
     // {path: '/articleListPage',name: '音乐列表',component: articleListPage},
     // {path: '/albumListPage',name: '专辑列表',component: albumListPage},
       {path: '/',redirect: '/loginPage'},
-      {path: '/loginPage',name: '登陆界面',component: loginPage}
+      {path: '/loginPage',name: '登陆界面',component: loginPage},
+      {path: '/startup',name: '启动页面',component: startUp},
+      
 
 
   ]
