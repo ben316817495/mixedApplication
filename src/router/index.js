@@ -50,35 +50,42 @@ import albumListPage from '@/components/musicComponents/albumList/albumListPage'
 
 
 
+///登陆界面
+import loginPage from '@/components/theNewPage/login';
+
+
 
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    {path: '/',redirect: '/index'},
-    {path: '/index',name: 'indexPage',component: indexPage},
-    {path: '/hello',name: 'Hello',component: Hello},
-    {path: '/articlePage',name: 'articlePage',component: articlePage},
-    {path: '/listPageOfArticle',name: '资讯文章',component: listPageArticle},
-    {path: '/contPageArticle',name: '文章详细内容',component: contPageArticle},
-    {path: '/aboutPage',name: '关于我',component: aboutPage},
-    {path: '/productPage',name: '产品列表',component: productPage},
-    {path: '/messagePage',name: '留言板',component: messagePage},
-    {path: '/musicMainPage',name: '音乐搜素',component: musicMainPage, 
-    children: [
-    	{path: '/', redirect: '/musicMainPage/musicIndexPage'},
-    	{path: '/musicMainPage/musicIndexPage',name: '音乐首页',component: musicIndexPage},
-    ]},
-    {path: '/musicSearchPage',name: '音乐搜索界面',component: musicSearchPage,
-        children: [
-           // {path: '/', redirect: '/musicMainPage/musicIndexPage/searchListOfSong'},
-            {path: '/musicSearchPage/searchListOfSong',name: '歌曲搜素列表',component: searchListOfSong},
-            {path: '/musicSearchPage/searchListOfAlbum',name: '专辑搜素列表',component: searchListOfAlbum},
-            {path: '/musicSearchPage/searchListOfSinger',name: '歌手搜素列表',component: searchListOfSinger},
-        ]},
-    {path: '/articleListPage',name: '音乐列表',component: articleListPage},
-    {path: '/albumListPage',name: '专辑列表',component: albumListPage},
+    // {path: '/',redirect: '/index'},
+    // {path: '/index',name: 'indexPage',component: indexPage},
+    // {path: '/hello',name: 'Hello',component: Hello},
+    // {path: '/articlePage',name: 'articlePage',component: articlePage},
+    // {path: '/listPageOfArticle',name: '资讯文章',component: listPageArticle},
+    // {path: '/contPageArticle',name: '文章详细内容',component: contPageArticle},
+    // {path: '/aboutPage',name: '关于我',component: aboutPage},
+    // {path: '/productPage',name: '产品列表',component: productPage},
+    // {path: '/messagePage',name: '留言板',component: messagePage},
+    // {path: '/musicMainPage',name: '音乐搜素',component: musicMainPage, 
+    // children: [
+    // 	{path: '/', redirect: '/musicMainPage/musicIndexPage'},
+    // 	{path: '/musicMainPage/musicIndexPage',name: '音乐首页',component: musicIndexPage},
+    // ]},
+    // {path: '/musicSearchPage',name: '音乐搜索界面',component: musicSearchPage,
+    //     children: [
+    //        // {path: '/', redirect: '/musicMainPage/musicIndexPage/searchListOfSong'},
+    //         {path: '/musicSearchPage/searchListOfSong',name: '歌曲搜素列表',component: searchListOfSong},
+    //         {path: '/musicSearchPage/searchListOfAlbum',name: '专辑搜素列表',component: searchListOfAlbum},
+    //         {path: '/musicSearchPage/searchListOfSinger',name: '歌手搜素列表',component: searchListOfSinger},
+    //     ]},
+    // {path: '/articleListPage',name: '音乐列表',component: articleListPage},
+    // {path: '/albumListPage',name: '专辑列表',component: albumListPage},
+      {path: '/',redirect: '/loginPage'},
+      {path: '/loginPage',name: '登陆界面',component: loginPage}
+
 
   ]
 })

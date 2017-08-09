@@ -2877,3 +2877,6 @@ body,
   /*max-width: 100%;*/
   height: 126px;
 }
+.loginPage {
+  background-image: url(../../../assets/img/loginImg.jpg);
+}
