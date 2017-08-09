@@ -2877,6 +2877,42 @@ body,
   /*max-width: 100%;*/
   height: 126px;
 }
+#app {
+  position: relative;
+  height: 100%;
+}
 .loginPage {
-  background-image: url(../../../assets/img/loginImg.jpg);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.loginPage .bgimg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: repeat-y;
+  background-size: 100%;
+  background-image: url(../../../assets/img/loginImg2.jpg);
+  z-index: 0;
+}
+.loginPage .logoimg {
+  width: 100%;
+  height: 181px;
+  position: relative;
+  background-image: url(../../../assets/img/logo2.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: 50%;
+  margin-top: 20px;
+}
+.loginPage .bottomFontStyle {
+  width: 100%;
+  text-align: center;
+  padding: 0 20px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 5%;
+  z-index: 5;
+  color: #74c5af;
 }
