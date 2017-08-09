@@ -2898,13 +2898,102 @@ body,
 }
 .loginPage .logoimg {
   width: 100%;
-  height: 181px;
+  height: 180px;
   position: relative;
   background-image: url(../../../assets/img/logo2.png);
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: 50%;
-  margin-top: 20px;
+  margin-top: 50px;
+}
+.loginPage .inputDevice {
+  width: 100%;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+.loginPage .inputDevice .inputBox_container {
+  margin: 40px 0 0 0;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgba(152, 212, 196, 0.3);
+}
+.loginPage .inputDevice .inputBox_line {
+  display: flex;
+  height: 48px;
+  line-height: 48px;
+}
+.loginPage .inputDevice .inputBox_line:not(:last-child) {
+  border-bottom: 1px dashed #74c5af;
+}
+.loginPage .inputDevice .inputBox_line [class*=" icon-"]:before,
+.loginPage .inputDevice .inputBox_line [class^=icon-]:before {
+  font-family: "iconfont" !important;
+  font-size: inherit;
+}
+.loginPage .inputDevice .inputBox_line .inputBox_icon {
+  padding: 0 10px;
+}
+.loginPage .inputDevice .inputBox_line .inputBox_icon i {
+  color: #74c5af;
+  font-size: 25px;
+}
+.loginPage .inputDevice .inputBox_inputbox {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  padding: 0 5px;
+}
+.loginPage .inputDevice .inputBox_input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+  background-color: transparent;
+  font-size: 18px;
+  color: #74c5af;
+  height: 48px;
+  line-height: 48px;
+}
+.loginPage .inputDevice .inputBox_input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #74c5af;
+}
+.loginPage .inputDevice .inputBox_input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #74c5af;
+}
+.loginPage .inputDevice .inputBox_input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #74c5af;
+}
+.loginPage .inputDevice .inputBox_input:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #74c5af;
+}
+.loginPage .inputDevice .inputBottom_button {
+  margin: 20px 0 0 0;
+}
+.loginPage .inputDevice .inputBottom_textLine {
+  margin: 10px 0 0 0;
+  padding: 10px 10px;
+  display: flex;
+}
+.loginPage .inputDevice .inputBottom_textLine .textLine_left,
+.loginPage .inputDevice .inputBottom_textLine .textLine_right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  color: #74c5af;
+}
+.loginPage .inputDevice .inputBottom_textLine .textLine_right {
+  text-align: right;
+}
+.loginPage .inputDevice .weui-btn_logincolor {
+  background-color: #74c5af;
+}
+.loginPage .inputDevice .weui-btn_logincolor:not(.weui-btn_disabled):active {
+  background-color: #98d4c4;
 }
 .loginPage .bottomFontStyle {
   width: 100%;

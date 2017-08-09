@@ -707,6 +707,10 @@ body, .page {
 //////////  2017-08-09
 //////////  新建的登陆页面
 ///////////////////////////////////////////
+
+@login_inputBox_base:#74c5af;
+@login_inputBox_light10:lighten(@login_inputBox_base,10%);
+
 #app{
     position: relative;
     height: 100%;
@@ -727,16 +731,107 @@ body, .page {
     }
     .logoimg{
         width: 100%;
-        height: 181px;
+        height: 180px;
         position: relative;
         background-image:url(../../../assets/img/logo2.png);
         background-repeat:no-repeat;
         background-position-x: center;
         background-size: 50%;
-        margin-top: 20px;
+        margin-top: 50px;
     }
     .inputDevice{
-       
+       width: 100%;
+    //    height: 300px;
+       padding:0 20px;
+       position: relative;
+           z-index: 10;
+       .inputBox_container{
+        //    padding:10px 0;
+        margin:40px 0 0 0; 
+           height: 100px;
+           border-radius: 10px;
+           background-color: rgba(152, 212, 196, 0.3);
+           
+       }
+       .inputBox_line{
+           display: flex;
+           height: 48px;
+           line-height: 48px;
+                &:not(:last-child){
+                  border-bottom: 1px dashed @login_inputBox_base;  
+                }
+               [class*=" icon-"]:before, [class^=icon-]:before {
+                   font-family:"iconfont" !important;
+                    font-size: inherit;
+                }
+                .inputBox_icon{
+                    padding:0 10px;
+                    i{
+                        color:@login_inputBox_base;
+                        font-size: 25px;
+                    }
+                }
+           
+       }
+       .inputBox_inputbox{
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+            padding:0 5px;
+        }
+       .inputBox_input{
+            width: 100%;
+            border: 0;
+            outline: 0;
+            -webkit-appearance: none;
+            background-color: transparent;
+            // font-size: inherit;
+            font-size:18px;
+            // color: inherit;
+             color:@login_inputBox_base;
+            // height: 1.47058824em;
+            height:48px;
+            // line-height: 1.47058824;
+            line-height:48px;
+            &::-webkit-input-placeholder { /* WebKit browsers */
+            　　color:@login_inputBox_base;
+            　　}
+            &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            　　color:@login_inputBox_base;
+            　　}
+            &::-moz-placeholder { /* Mozilla Firefox 19+ */
+            　　color:@login_inputBox_base;
+            　　}
+            &:-ms-input-placeholder { /* Internet Explorer 10+ */
+            　　color:@login_inputBox_base;
+            　　}
+        }
+        .inputBottom_button{
+           margin:20px 0 0 0;   
+        }
+        .inputBottom_textLine{
+            margin: 10px 0 0 0;
+            padding:10px 10px;
+            display: flex;
+         
+            .textLine_left,.textLine_right{
+                -webkit-box-flex: 1;
+                 -webkit-flex: 1;
+                 flex: 1;
+                 color:@login_inputBox_base;
+            }
+            .textLine_right{
+                text-align: right;
+            }
+        }
+        .weui-btn_logincolor{
+                background-color: @login_inputBox_base;
+                &:not(.weui-btn_disabled):active {
+                    // color: rgba(255, 255, 255, 0.6);
+                    background-color: @login_inputBox_light10;
+                }
+        }
+            
     }
     .bottomFontStyle{
          width: 100%;
@@ -746,6 +841,6 @@ body, .page {
         position: absolute;
         bottom:5%;
         z-index: 5;
-        color:#74c5af;
+        color:@login_inputBox_base;
     }
 }
