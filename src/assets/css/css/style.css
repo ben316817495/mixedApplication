@@ -3031,6 +3031,17 @@ body,
   animation: logoTextAnimate 2s ease-out 3.3s;
   animation-fill-mode: forwards;
 }
+.startUp .logotext_topsmall {
+  width: 100%;
+  top: -115px;
+  letter-spacing: 5px;
+  text-align: center;
+  position: relative;
+  opacity: 0;
+  animation: logoTextAnimate_right 2s ease-out 4s;
+  animation-fill-mode: forwards;
+  color: #74c5af;
+}
 @keyframes logoAnimate {
   0% {
     transform: rotate(0deg);
@@ -3070,6 +3081,16 @@ body,
   }
   100% {
     left: 0;
+    opacity: 1;
+  }
+}
+@keyframes logoTextAnimate_right {
+  0% {
+    right: -1000px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
     opacity: 1;
   }
 }

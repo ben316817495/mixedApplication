@@ -901,6 +901,17 @@ body, .page {
         animation:logoTextAnimate 2s ease-out 3.3s;
         animation-fill-mode: forwards;
     }
+    .logotext_topsmall{
+        width: 100%;  
+         top:-115px;
+         letter-spacing:5px;
+        text-align: center; 
+        position: relative;
+        opacity: 0;
+        animation:logoTextAnimate_right 2s ease-out 4s;
+        animation-fill-mode: forwards;
+        color:@login_inputBox_base;
+    }
 }
 
 @keyframes logoAnimate{
@@ -913,5 +924,9 @@ body, .page {
 @keyframes logoTextAnimate{
     0%{left:-1000px; opacity: 0;}
     100%{left:0; opacity: 1;}
+}
+@keyframes logoTextAnimate_right{
+    0%{right:-1000px; opacity: 0;}
+    100%{right:0; opacity: 1;}
 }
 //@-webkit-keyframes
