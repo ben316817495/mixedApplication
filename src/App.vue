@@ -9,7 +9,9 @@
 
 <script>
  import '@/assets/css/css/style.css';
- import '@/assets/css/icomoon/style.css';
+ //字体
+ //import '@/assets/css/icomoon/style.css';
+ import '@/assets/font/iconfont.css';
 
 export default {
   name: 'app'
