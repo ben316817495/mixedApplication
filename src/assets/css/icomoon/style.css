@@ -1,0 +1,389 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?jbvaf');
+  src:  url('fonts/icomoon.eot?jbvaf#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?jbvaf') format('truetype'),
+    url('fonts/icomoon.woff?jbvaf') format('woff'),
+    url('fonts/icomoon.svg?jbvaf#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-w2-Cupping:before {
+  content: "\e900";
+}
+.icon-w2-guarantee:before {
+  content: "\e901";
+}
+.icon-w2-edit:before {
+  content: "\e902";
+}
+.icon-w2-recordMedical-:before {
+  content: "\e903";
+}
+.icon-w2-step:before {
+  content: "\e904";
+}
+.icon-w2-seeadoctor:before {
+  content: "\e905";
+}
+.icon-w2-address:before {
+  content: "\e906";
+}
+.icon-w2-Telephone:before {
+  content: "\e907";
+}
+.icon-w2-Order:before {
+  content: "\e908";
+}
+.icon-w2-Location:before {
+  content: "\e909";
+}
+.icon-w2-ear:before {
+  content: "\e90a";
+}
+.icon-w2-code:before {
+  content: "\e90b";
+}
+.icon-w2-classification:before {
+  content: "\e90c";
+}
+.icon-w2-service:before {
+  content: "\e90d";
+}
+.icon-w2-pay:before {
+  content: "\e90e";
+}
+.icon-w2-Individualization:before {
+  content: "\e90f";
+}
+.icon-w2-ShopCar2:before {
+  content: "\e910";
+}
+.icon-w2-ShopCar:before {
+  content: "\e911";
+}
+.icon-w2-addShopCar:before {
+  content: "\e912";
+}
+.icon-w2-bone:before {
+  content: "\e913";
+}
+.icon-w2-Chemistry:before {
+  content: "\e914";
+}
+.icon-w2-activity:before {
+  content: "\e915";
+}
+.icon-w2-integral:before {
+  content: "\e916";
+}
+.icon-w2-Family:before {
+  content: "\e917";
+}
+.icon-w2-Trophy:before {
+  content: "\e918";
+}
+.icon-w2-Haveinhand:before {
+  content: "\e919";
+}
+.icon-w2-spirit:before {
+  content: "\e91a";
+}
+.icon-w2-Collection:before {
+  content: "\e91b";
+}
+.icon-w2-cardBag:before {
+  content: "\e91c";
+}
+.icon-w2-mouth:before {
+  content: "\e91d";
+}
+.icon-w2-Dustbin:before {
+  content: "\e91e";
+}
+.icon-w2-buleWifi:before {
+  content: "\e91f";
+}
+.icon-w2-gift:before {
+  content: "\e920";
+}
+.icon-w2-History:before {
+  content: "\e921";
+}
+.icon-w2-Contacts:before {
+  content: "\e922";
+}
+.icon-w2-link:before {
+  content: "\e923";
+}
+.icon-w2-save:before {
+  content: "\e924";
+}
+.icon-w2-look:before {
+  content: "\e925";
+}
+.icon-w2-Cosmetology:before {
+  content: "\e926";
+}
+.icon-w2-man:before {
+  content: "\e927";
+}
+.icon-w2-clock:before {
+  content: "\e928";
+}
+.icon-w2-medicine:before {
+  content: "\e929";
+}
+.icon-w2-women:before {
+  content: "\e92a";
+}
+.icon-w2-skin:before {
+  content: "\e92b";
+}
+.icon-w2-car:before {
+  content: "\e92c";
+}
+.icon-w2-generalpractice:before {
+  content: "\e92d";
+}
+.icon-w2-hot:before {
+  content: "\e92e";
+}
+.icon-w2-date:before {
+  content: "\e92f";
+}
+.icon-w2-Scancode:before {
+  content: "\e930";
+}
+.icon-w2-Scan:before {
+  content: "\e931";
+}
+.icon-w2-delet:before {
+  content: "\e932";
+}
+.icon-w2-shop:before {
+  content: "\e933";
+}
+.icon-w2-shop2:before {
+  content: "\e934";
+}
+.icon-w2-equipment:before {
+  content: "\e935";
+}
+.icon-w2-Setup2:before {
+  content: "\e936";
+}
+.icon-w2-Setup:before {
+  content: "\e937";
+}
+.icon-w2-CameraReverse:before {
+  content: "\e938";
+}
+.icon-w2-life2:before {
+  content: "\e939";
+}
+.icon-w2-life:before {
+  content: "\e93a";
+}
+.icon-w2-voice:before {
+  content: "\e93b";
+}
+.icon-w2-time:before {
+  content: "\e93c";
+}
+.icon-w2-Video:before {
+  content: "\e93d";
+}
+.icon-w2-Deliveryaddress:before {
+  content: "\e93e";
+}
+.icon-w2-home:before {
+  content: "\e93f";
+}
+.icon-w2-index:before {
+  content: "\e940";
+}
+.icon-w2-input:before {
+  content: "\e941";
+}
+.icon-w2-Refresh:before {
+  content: "\e942";
+}
+.icon-w2-sleep:before {
+  content: "\e943";
+}
+.icon-w2-Explain:before {
+  content: "\e944";
+}
+.icon-w2-seach:before {
+  content: "\e945";
+}
+.icon-w2-lock:before {
+  content: "\e946";
+}
+.icon-w2-characteristic:before {
+  content: "\e947";
+}
+.icon-w2-warring:before {
+  content: "\e948";
+}
+.icon-w2-tips:before {
+  content: "\e949";
+}
+.icon-w2-weight:before {
+  content: "\e94a";
+}
+.icon-w2-weather:before {
+  content: "\e94b";
+}
+.icon-w2-img:before {
+  content: "\e94c";
+}
+.icon-w2-refund:before {
+  content: "\e94d";
+}
+.icon-w2-Surgery:before {
+  content: "\e94e";
+}
+.icon-w2-done3:before {
+  content: "\e94f";
+}
+.icon-w2-done2:before {
+  content: "\e950";
+}
+.icon-w2-done:before {
+  content: "\e951";
+}
+.icon-w2-text:before {
+  content: "\e952";
+}
+.icon-w2-ask:before {
+  content: "\e953";
+}
+.icon-w2-my:before {
+  content: "\e954";
+}
+.icon-w2-Myorder:before {
+  content: "\e955";
+}
+.icon-w2-Myfeedback:before {
+  content: "\e956";
+}
+.icon-w2-Myredenvelope:before {
+  content: "\e957";
+}
+.icon-w2-user:before {
+  content: "\e958";
+}
+.icon-w2-Mycoupon:before {
+  content: "\e959";
+}
+.icon-w2-flower:before {
+  content: "\e95a";
+}
+.icon-w2-camera:before {
+  content: "\e95b";
+}
+.icon-w2-mess:before {
+  content: "\e95c";
+}
+.icon-w2-messCenter:before {
+  content: "\e95d";
+}
+.icon-w2-blood:before {
+  content: "\e95e";
+}
+.icon-w2-blood2:before {
+  content: "\e95f";
+}
+.icon-w2-blood3:before {
+  content: "\e960";
+}
+.icon-w2-ask2:before {
+  content: "\e961";
+}
+.icon-w2-eye:before {
+  content: "\e962";
+}
+.icon-w2-bottle:before {
+  content: "\e963";
+}
+.icon-w2-pill:before {
+  content: "\e964";
+}
+.icon-w2-Medicine-chest:before {
+  content: "\e965";
+}
+.icon-w2-Leaf:before {
+  content: "\e966";
+}
+.icon-w2-Doctor1:before {
+  content: "\e967";
+}
+.icon-w2-Doctor:before {
+  content: "\e968";
+}
+.icon-w2-Already:before {
+  content: "\e969";
+}
+.icon-w2-canel:before {
+  content: "\e96a";
+}
+.icon-w2-vaccine:before {
+  content: "\e96b";
+}
+.icon-w2-Feedback:before {
+  content: "\e96c";
+}
+.icon-w2-diet:before {
+  content: "\e96d";
+}
+.icon-w2-Couponcard:before {
+  content: "\e96e";
+}
+.icon-w2-baby:before {
+  content: "\e96f";
+}
+.icon-w2-VoiceMac:before {
+  content: "\e970";
+}
+.icon-w2-Acer:before {
+  content: "\e971";
+}
+.icon-w2-sport:before {
+  content: "\e972";
+}
+.icon-w2-Fabulous:before {
+  content: "\e973";
+}
+.icon-w2-camera2:before {
+  content: "\e974";
+}
+.icon-w2-Diagnosticrecord:before {
+  content: "\e975";
+}
+.icon-w2-medicineCN:before {
+  content: "\e976";
+}
+.icon-w2-Consultation:before {
+  content: "\e977";
+}
+.icon-w2-Diamonds:before {
+  content: "\e978";
+}

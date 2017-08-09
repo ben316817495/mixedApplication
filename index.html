@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="utf-8">
+    <title>insurance</title>
+    <!-- <script src="//unpkg.com/vue-ydui/dist/ydui.flexible.js"></script> -->
+  <script type="text/javascript">
+function myBrowser(){
+       var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+    var isOpera = userAgent.indexOf("Opera") > -1; //判断是否Opera浏览器
+    var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera; //判断是否IE浏览器
+    var isFF = userAgent.indexOf("Firefox") > -1; //判断是否Firefox浏览器
+    var isSafari = userAgent.indexOf("Safari") > -1; //判断是否Safari浏览器
+    var isChrome = userAgent.indexOf("Chrome") > -1; 
+    if (isOpera) {
+        return "Opera"
+    }; //判断是否Opera浏览器
+    if (isFF) {
+        return "FF";
+    } //判断是否Firefox浏览器
+    if (isChrome){
+  return "Chrome";
+ }
+    if (isSafari) {
+        return "Safari";
+    } //判断是否Safari浏览器
+    if (isChrome) {
+        return "Chrome";
+    }
+    if (isIE) {
+        var IE5 = IE55 = IE6 = IE7 = IE8 = IE9 =false;
+        var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+        reIE.test(userAgent);
+        var fIEVersion = parseFloat(RegExp["$1"]);
+        IE55 = fIEVersion == 5.5;
+        IE6 = fIEVersion == 6.0;
+        IE7 = fIEVersion == 7.0;
+        IE8 = fIEVersion == 8.0;
+        IE9 = fIEVersion == 9.0;
+
+        if (IE55) {
+            return "IE55";
+        }
+        if (IE6) {
+            return "IE6";
+        }
+        if (IE7) {
+            return "IE7";
+        }
+        if (IE8) {
+            return "IE8";
+        }
+        if (IE9) {
+            return "IE9";
+        }
+    }//isIE end
+    
+   
+}
+//以下是调用上面的函数
+// var mb = myBrowser();
+// if (mb == "FF") {
+//     alert("我是 Firefox");
+// }
+// if (mb == "Opera") {
+//     alert("我是 Opera");
+// }
+// if (mb == "Safari") {
+//     alert("我是 Safari");
+// }
+// if (mb == "Chrome") {
+//     alert("我是 Chrome");
+// }
+// if (mb == "IE55") {
+//     alert("我是 IE5.5");
+// }
+// if (mb == "IE6") {
+//     alert("我是 IE6");
+// }
+// if (mb == "IE7") {
+//     alert("我是 IE7");
+// }
+// if (mb == "IE8") {
+//     alert("我是 IE8");
+// }
+// if (mb == "IE9") {
+//     alert("我是 IE9");
+// }
+</script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
