@@ -867,14 +867,51 @@ body, .page {
 /////////   启动页面
 ///////////////////////////////////////////
 .startUp{
-    .logoimg{
-        width: 100%;
-        height: 180px;
+    // .logoimg{
+    //     width: 100%;
+    //     height: 180px;
+    //     position: relative;
+    //     background-image:url(../../../assets/img/logo2.png);
+    //     background-repeat:no-repeat;
+    //     background-position-x: center;
+    //     background-size: 50%;
+    //     margin-top: 50px;
+    // } 
+    .logofull{
+       width: 100%;
+       background-image:url(../../../assets/img/logoq.png);
+       background-repeat:no-repeat;
+       background-position-x: center;
+       background-size: 70%;
+       position: relative;
+       height: 250px;
+       top:150px;
+    //    opacity: 0;
+       animation:logoAnimate 5s ease;
+    }
+    .logotext{
+        width: 100%;  
         position: relative;
-        background-image:url(../../../assets/img/logo2.png);
+        height: 80px;
+         top:-25px;
+        background-image:url(../../../assets/img/logotext.png);
         background-repeat:no-repeat;
         background-position-x: center;
-        background-size: 50%;
-        margin-top: 50px;
-    } 
+         opacity: 0;
+        animation:logoTextAnimate 2s ease-out 3.3s;
+        animation-fill-mode: forwards;
+    }
 }
+
+@keyframes logoAnimate{
+    0%{transform:rotate(0deg);background-size: 0%;opacity: 0;background-image:url(../../../assets/img/logofull.png);}
+    1%{transform:rotate(0deg);background-size: 0%;opacity: 1;background-image:url(../../../assets/img/logofull.png);}
+    80%{transform:rotate(360deg);background-size: 70%;opacity: 1;background-image:url(../../../assets/img/logofull.png);}
+    90%{transform:rotate(360deg);background-size: 70%;opacity: 1;background-image:url(../../../assets/img/logofull.png);}
+    100%{transform:rotate(360deg);background-size: 70%;opacity: 1;background-image:url(../../../assets/img/logoq.png);}
+}
+@keyframes logoTextAnimate{
+    0%{left:-1000px; opacity: 0;}
+    100%{left:0; opacity: 1;}
+}
+//@-webkit-keyframes
