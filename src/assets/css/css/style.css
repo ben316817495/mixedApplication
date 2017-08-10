@@ -3477,8 +3477,8 @@ body,
   height: 100%;
   position: relative;
 }
-.indexPage .tabbar-txt {
-  font-size: 14px;
+.tabbar-txt {
+  font-size: 14px !important;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
