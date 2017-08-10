@@ -2,6 +2,9 @@
 
 
 @import "../../weuiless/weui";
+@import "../icon";
+
+
 @themeColor:#fa91a2;
 
 
@@ -496,6 +499,7 @@ body, .page {
 ////////////-----------imgBtnGrids.vue
 ///////////////////////////////////////////
 .imgBtnGrids{
+    margin: 10px 0 60px 0;
 	.titleTex{
 		padding: 12px 12px 10px;
     	font-size: 15px;
@@ -515,15 +519,16 @@ body, .page {
 		margin-top: 10px;
 	}
 	.weui-grids{
+        background-color: rgb(255, 255, 255);
 		i{
 			font-size:45px !important;
-			color:@themeColor !important;
+			color:@login_inputBox_base !important;
 		}	
 	}
 
 	.weui-grid__icon {
 	    width: 45px;
-	    height: 45px;
+	    height: 59px;
 	}
 }
 ///////////////////////////////////////////
@@ -728,6 +733,11 @@ body, .page {
 }
 
 
+ .iconfont[class*=" icon-"]:before, .iconfont[class^=icon-]:before {
+                   font-family:"iconfont" !important;
+                    font-size: inherit;
+                }
+
 .startUp,.loginPage{
     width: 100%;
     height:100%;
@@ -814,10 +824,7 @@ body, .page {
                 &:not(:last-child){
                   border-bottom: 1px dashed @login_inputBox_base;  
                 }
-               [class*=" icon-"]:before, [class^=icon-]:before {
-                   font-family:"iconfont" !important;
-                    font-size: inherit;
-                }
+              
                 .inputBox_icon{
                     padding:0 10px;
                     i{
@@ -1012,14 +1019,12 @@ body, .page {
     0%{right:-1000px; opacity: 0;}
     100%{right:0; opacity: 1;}
 }
-
 @keyframes fragment_center{
     0%{ top:132px; left:176px; opacity: 0; transform:rotate(0deg);}
     1%{ top:132px; left:176px; opacity: 1;transform:rotate(0deg);}
     99%{left:1000px; top:-100px; opacity: 1;transform:rotate(360deg);}
     100%{left:1000px; top:-100px; opacity: 0;transform:rotate(360deg);}
 }
-
 @keyframes fragment_left{
     0%{ top:145px; left:95px; opacity: 0; transform:rotate(0deg);}
     1%{ top:145px; left:95px; opacity: 1;transform:rotate(0deg);}
@@ -1040,9 +1045,12 @@ body, .page {
 //////////  新建的登陆页面
 /////////   -总路由- 页面样式
 ///////////////////////////////////////////
-.mainView{
+.mainView,.indexPage{
      width: 100%;
     height:100%;
     position: relative;
-    overflow: hidden; 
+    // overflow: hidden; 
 }
+
+
+

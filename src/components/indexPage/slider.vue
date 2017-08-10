@@ -25,7 +25,6 @@
 	   mounted:function () {
 	   	this.getBanner()
 	  },//mounted
-
 	  methods:{	 
 	  		getBanner(){
   			 this.$http.get(_url+'MuiscApi/banner').then(response => {
@@ -38,8 +37,6 @@
 				  });
 	  		}
 	  },//methods
-}
-
-
+	}
  </script>
 
