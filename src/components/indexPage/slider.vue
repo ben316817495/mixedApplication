@@ -18,7 +18,7 @@
 	    data() {
 	      return {
 	      	banner:[
-	      		 // {pic:'../../assets/img/banner.jpg'},
+	      		 {pic:'https://ben316817495.github.io/mixedApplication/showpage/banner1.jpg'},
 	      	],
 	      }
 	  },//data()
@@ -27,14 +27,14 @@
 	  },//mounted
 	  methods:{	 
 	  		getBanner(){
-  			 this.$http.get(_url+'MuiscApi/banner').then(response => {
-				    // get body data
-				    this.banner = response.body.banners;
-				    //console.log(this.banner)
-				  }, response => {
-				    // error callback
-				    console.log(response)
-				  });
+  			//  this.$http.get(_url+'MuiscApi/banner').then(response => {
+				//     // get body data
+				//     this.banner = response.body.banners;
+				//     //console.log(this.banner)
+				//   }, response => {
+				//     // error callback
+				//     console.log(response)
+				//   });
 	  		}
 	  },//methods
 	}
