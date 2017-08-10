@@ -2,17 +2,25 @@
 	<div class="sliderPage">
 	<yd-flexbox>
 		<yd-slider>
-	         <yd-slider-item v-for="item in banner">
+	       <!--   <yd-slider-item v-for="item in banner">
 	            <a>
 	                <img :src="item.pic">
 	            </a>
-	        </yd-slider-item> 
+	        </yd-slider-item>  -->
 
-					 <!-- <yd-slider-item v-for="item in 2">
+	         <yd-slider-item >
+	            <a>
+	                <img src="../../assets/img/banner2.jpg">
+	            </a>
+	        </yd-slider-item>
+
+			<yd-slider-item >
 	            <a>
 	                <img src="../../assets/img/banner1.jpg">
 	            </a>
-	        </yd-slider-item> -->
+	        </yd-slider-item>
+
+	       
 	        
 	        
 	    </yd-slider>
