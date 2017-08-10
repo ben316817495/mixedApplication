@@ -2909,6 +2909,20 @@ body,
   z-index: 5;
   color: #74c5af;
 }
+.weui-btn_loginnocolor {
+  background-color: transparent;
+  border: 1px solid #74c5af;
+  color: #74c5af;
+}
+.weui-btn_loginnocolor:not(.weui-btn_disabled):active {
+  background-color: #98d4c4;
+}
+.weui-btn_logincolor {
+  background-color: #74c5af;
+}
+.weui-btn_logincolor:not(.weui-btn_disabled):active {
+  background-color: #98d4c4;
+}
 .loginPage .logoimg {
   width: 100%;
   height: 180px;
@@ -3002,12 +3016,6 @@ body,
 .loginPage .inputDevice .inputBottom_textLine .textLine_right {
   text-align: right;
 }
-.loginPage .inputDevice .weui-btn_logincolor {
-  background-color: #74c5af;
-}
-.loginPage .inputDevice .weui-btn_logincolor:not(.weui-btn_disabled):active {
-  background-color: #98d4c4;
-}
 .startUp {
   /*  // .logoimg{
     //     width: 100%;
@@ -3028,8 +3036,8 @@ body,
   /*background-size: 70%;*/
   background-size: 300px;
   position: relative;
-  height: 250px;
-  top: 150px;
+  height: 256px;
+  top: 80px;
   /*//    opacity: 0;*/
   animation: logoAnimate 5s ease;
 }
@@ -3037,7 +3045,7 @@ body,
   width: 100%;
   position: relative;
   height: 80px;
-  top: -25px;
+  top: -95px;
   background-image: url(../../../assets/img/logotext.png);
   background-repeat: no-repeat;
   background-position-x: center;
@@ -3047,7 +3055,7 @@ body,
 }
 .startUp .logotext_topsmall {
   width: 100%;
-  top: -115px;
+  top: -183px;
   letter-spacing: 5px;
   text-align: center;
   position: relative;
@@ -3055,6 +3063,22 @@ body,
   animation: logoTextAnimate_right 2s ease-out 4s;
   animation-fill-mode: forwards;
   color: #74c5af;
+}
+.startUp .logoBottom_btnLine {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  opacity: 0;
+  bottom: 90px;
+  animation: logoTextAnimate_right 2s ease-out 4s;
+  animation-fill-mode: forwards;
+}
+.startUp .logoBottom_btnLine .logoBottom_btnLeft,
+.startUp .logoBottom_btnLine .logoBottom_btnRight {
+  padding: 0 10px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
 }
 @keyframes logoAnimate {
   0% {

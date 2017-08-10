@@ -744,6 +744,25 @@ body, .page {
         color:@login_inputBox_base;
     }
 }
+//按钮
+//登陆页无色
+ .weui-btn_loginnocolor{
+     background-color:transparent;
+     border:1px solid @login_inputBox_base;
+     color:  @login_inputBox_base;
+      &:not(.weui-btn_disabled):active {
+                    // color: rgba(255, 255, 255, 0.6);
+                    background-color: @login_inputBox_light10;
+                }
+ }
+//原色
+ .weui-btn_logincolor{
+                background-color: @login_inputBox_base;
+                &:not(.weui-btn_disabled):active {
+                    // color: rgba(255, 255, 255, 0.6);
+                    background-color: @login_inputBox_light10;
+                }
+        }
 
 
 ///////////////////////////////////////////
@@ -849,13 +868,7 @@ body, .page {
                 text-align: right;
             }
         }
-        .weui-btn_logincolor{
-                background-color: @login_inputBox_base;
-                &:not(.weui-btn_disabled):active {
-                    // color: rgba(255, 255, 255, 0.6);
-                    background-color: @login_inputBox_light10;
-                }
-        }
+       
             
     }
     
@@ -885,9 +898,9 @@ body, .page {
        /*background-size: 70%;*/
        background-size: 300px;
        position: relative;
-       height: 250px;
+       height: 256px;
 
-       top:150px;
+       top:80px;
     /*//    opacity: 0;*/
        animation:logoAnimate 5s ease;
     }
@@ -895,7 +908,7 @@ body, .page {
         width: 100%;  
         position: relative;
         height: 80px;
-         top:-25px;
+         top:-95px;
         background-image:url(../../../assets/img/logotext.png);
         background-repeat:no-repeat;
         background-position-x: center;
@@ -905,7 +918,7 @@ body, .page {
     }
     .logotext_topsmall{
         width: 100%;  
-         top:-115px;
+         top:-183px;
          letter-spacing:5px;
         text-align: center; 
         position: relative;
@@ -913,6 +926,21 @@ body, .page {
         animation:logoTextAnimate_right 2s ease-out 4s;
         animation-fill-mode: forwards;
         color:@login_inputBox_base;
+    }
+    .logoBottom_btnLine{
+        width: 100%;
+        display: flex;
+        position: absolute;
+        opacity: 0;
+        bottom:90px;
+        animation:logoTextAnimate_right 2s ease-out 4s;
+        animation-fill-mode: forwards;
+        .logoBottom_btnLeft,.logoBottom_btnRight{
+                padding:0 10px;
+                -webkit-box-flex: 1;
+                 -webkit-flex: 1;
+                 flex: 1;
+        }
     }
 }
 

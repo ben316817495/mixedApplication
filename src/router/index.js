@@ -85,9 +85,11 @@ export default new Router({
     //     ]},
     // {path: '/articleListPage',name: '音乐列表',component: articleListPage},
     // {path: '/albumListPage',name: '专辑列表',component: albumListPage},
-      {path: '/',redirect: '/loginPage'},
-      {path: '/loginPage',name: '登陆界面',component: loginPage},
+      {path: '/',redirect: '/startup'},
       {path: '/startup',name: '启动页面',component: startUp},
+      {path: '/loginPage',name: '登陆界面',component: function(resolve){
+        require(['@/components/theNewPage/login'],resolve);
+      }},
       
 
 
