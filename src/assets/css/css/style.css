@@ -3477,3 +3477,9 @@ body,
   height: 100%;
   position: relative;
 }
+.indexPage .tabbar-txt {
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
