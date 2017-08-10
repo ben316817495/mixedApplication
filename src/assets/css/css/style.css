@@ -3070,7 +3070,7 @@ body,
   position: absolute;
   opacity: 0;
   bottom: 90px;
-  animation: logoTextAnimate_right 2s ease-out 4s;
+  animation: logoTextAnimate_right 2s ease-out 4.5s;
   animation-fill-mode: forwards;
 }
 .startUp .logoBottom_btnLine .logoBottom_btnLeft,
@@ -3131,4 +3131,10 @@ body,
     right: 0;
     opacity: 1;
   }
+}
+.mainView {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }

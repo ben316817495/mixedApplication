@@ -54,6 +54,12 @@ import albumListPage from '@/components/musicComponents/albumList/albumListPage'
 import loginPage from '@/components/theNewPage/login';
 import startUp from '@/components/theNewPage/start-up';
 
+//内容路由总页面
+import mainView from '@/components/theNewPage/mainView';
+import new_indexPage from '@/components/theNewPage/index/indexPage';
+
+
+
 
 
 
@@ -90,6 +96,13 @@ export default new Router({
       {path: '/loginPage',name: '登陆界面',component: function(resolve){
         require(['@/components/theNewPage/login'],resolve);
       }},
+      {path: '/index',name: '内容总路由',component: function(resolve){require(['@/components/theNewPage/mainView'],resolve);},
+      children:[
+              {path: '/',redirect: '/index/indexPage'},
+              {path: '/index/indexPage',name: '首页',component: function(resolve){
+                  require(['@/components/theNewPage/index/indexPage'],resolve);
+              }},
+      ]},
       
 
 
