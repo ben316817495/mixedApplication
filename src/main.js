@@ -19,7 +19,7 @@ Vue.http.options.xhr = { withCredentials: true }
 Vue.http.options.emulateHTTP = true;
 Vue.http.options.emulateJSON = true;
 
-window._url = 'http://paula.wangmc.cn/php/index.php/'
+window._url = 'http://39.108.161.205/banner'
 //window.YDUI = YDUI.dialog;
 
 

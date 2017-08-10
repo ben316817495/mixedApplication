@@ -2,17 +2,17 @@
 	<div class="sliderPage">
 	<yd-flexbox>
 		<yd-slider>
-	        <!-- <yd-slider-item v-for="item in banner">
+	         <yd-slider-item v-for="item in banner">
 	            <a>
 	                <img :src="item.pic">
 	            </a>
-	        </yd-slider-item> -->
+	        </yd-slider-item> 
 
-					 <yd-slider-item v-for="item in 2">
+					 <!-- <yd-slider-item v-for="item in 2">
 	            <a>
 	                <img src="../../assets/img/banner1.jpg">
 	            </a>
-	        </yd-slider-item>
+	        </yd-slider-item> -->
 	        
 	        
 	    </yd-slider>
@@ -25,7 +25,7 @@
 	    data() {
 	      return {
 	      	banner:[
-	      		 {pic:"../../assets/img/banner.jpg"},
+	      		// {pic:"../../assets/img/banner.jpg"},
 	      	],
 	      }
 	  },//data()
@@ -34,14 +34,14 @@
 	  },//mounted
 	  methods:{	 
 	  		getBanner(){
-  			//  this.$http.get(_url+'MuiscApi/banner').then(response => {
-				//     // get body data
-				//     this.banner = response.body.banners;
-				//     //console.log(this.banner)
-				//   }, response => {
-				//     // error callback
-				//     console.log(response)
-				//   });
+  			 this.$http.get(_url).then(response => {
+				    // get body data
+				    this.banner = response.body.banners;
+				    //console.log(this.banner)
+				  }, response => {
+				    // error callback
+				    console.log(response)
+				  });
 	  		}
 	  },//methods
 	}
