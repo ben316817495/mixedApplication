@@ -5,6 +5,9 @@
             <!-- <div class="logoimg"></div> -->
 
             <div class="logofull"></div>
+            <div class="fragment_center"></div>
+            <div class="fragment_left"></div>
+            <div class="fragment_right"></div>
             <div class="logotext"></div>
             <div class="logotext_topsmall">Engineer of browser side</div>
 

@@ -3080,6 +3080,48 @@ body,
   -webkit-flex: 1;
   flex: 1;
 }
+.startUp .fragment_center {
+  width: 60px;
+  height: 60px;
+  top: 132px;
+  left: 176px;
+  opacity: 0;
+  position: absolute;
+  background-image: url(../../../assets/img/fragment_center.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: 55px;
+  animation: fragment_center 2s ease-out 4.5s;
+  animation-fill-mode: forwards;
+}
+.startUp .fragment_left {
+  width: 100px;
+  height: 100px;
+  top: 145px;
+  left: 95px;
+  opacity: 0;
+  position: absolute;
+  background-image: url(../../../assets/img/fragment_left.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: 99px;
+  animation: fragment_left 2s ease-out 4.5s;
+  animation-fill-mode: forwards;
+}
+.startUp .fragment_right {
+  width: 100px;
+  height: 100px;
+  top: 145px;
+  left: 219px;
+  opacity: 0;
+  position: absolute;
+  background-image: url(../../../assets/img/fragment_right.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: 99px;
+  animation: fragment_right 2s ease-out 4.5s;
+  animation-fill-mode: forwards;
+}
 @keyframes logoAnimate {
   0% {
     transform: rotate(0deg);
@@ -3130,6 +3172,84 @@ body,
   100% {
     right: 0;
     opacity: 1;
+  }
+}
+@keyframes fragment_center {
+  0% {
+    top: 132px;
+    left: 176px;
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  1% {
+    top: 132px;
+    left: 176px;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  99% {
+    left: 1000px;
+    top: -100px;
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+  100% {
+    left: 1000px;
+    top: -100px;
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+}
+@keyframes fragment_left {
+  0% {
+    top: 145px;
+    left: 95px;
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  1% {
+    top: 145px;
+    left: 95px;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  99% {
+    left: 1000px;
+    top: 600px;
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+  100% {
+    left: 1000px;
+    top: 600px;
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+}
+@keyframes fragment_right {
+  0% {
+    top: 145px;
+    left: 219px;
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  1% {
+    top: 145px;
+    left: 219px;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  99% {
+    left: 1000px;
+    top: 145px;
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+  100% {
+    left: 1000px;
+    top: 145px;
+    opacity: 0;
+    transform: rotate(360deg);
   }
 }
 .mainView {
