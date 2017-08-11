@@ -2981,18 +2981,19 @@ body,
 .articleList .newActList .weui-media-box__hd,
 .searchList .newActList .weui-media-box__hd,
 .PublicList .newActList .weui-media-box__hd {
-  width: 70px;
-  height: 70px;
+  width: 72px;
+  height: 72px;
   line-height: 90px;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
+  border-top: 1px solid #e5e5e5;
   display: table-cell;
 }
 .articleList .newActList .weui-media-box__hd img,
 .searchList .newActList .weui-media-box__hd img,
 .PublicList .newActList .weui-media-box__hd img {
-  width: 70px;
-  height: 70px;
+  max-width: 100%;
   vertical-align: middle;
 }
 .articleList .newActList .weui-media-box__info,

@@ -94,7 +94,7 @@
 	  		},//getArticleList
 	  		goToTheArticle(item){
 	  			//console.log(item);
-	  			this.$router.push({path:'/contPageArticle',query:{ID:item.id}});
+	  			this.$router.push({path:'/index/articleListPage',query:{ID:item.id}});
 	  		},//goToTheArticle
 	  },//methods
     mixins: [http]

@@ -53,10 +53,10 @@
 	  		if(!this.$route.query.ID){
 	  			window.history.go(-1);
 	  		 }else{
-	  		 	this.getHttpApi(_url+'PageApi/getArticleContent'+'/id/'+this.$route.query.ID).then((data) => {
+	  		 	this.getHttpApi(_url+'cnodeApi/gettopicsContent'+'?id='+this.$route.query.ID).then((data) => {
 	  		 		this.$dialog.loading.close();
 	  		 		console.log(data)
-  					this.newsArticleCont = data;
+  					this.newsArticleCont = data.data;
   				},(error) => {
           			console.log(error);
        			});

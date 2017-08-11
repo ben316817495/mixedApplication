@@ -111,6 +111,9 @@ export default new Router({
               {path: '/index/listPageOfArticle',name: '资讯文章列表',component: function(resolve){
                   require(['@/components/generalArticle/articleList'],resolve);
               }},
+              {path: '/index/articleListPage',name: '资讯文章内容',component: function(resolve){
+                  require(['@/components/generalArticle/articlePage'],resolve);
+              }},
       ]},
       
 
