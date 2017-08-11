@@ -13,16 +13,18 @@
             <div class="weui-panel__bd">
                 <div class="newActList" v-for="item in newsArticleList" @click="goToTheArticle(item)">
                         <div class="weui-media-box weui-media-box_appmsg ">
-                            <div class="weui-media-box__hd"><img src="http://via.placeholder.com/150x150" alt="" class="weui-media-box__thumb">
+                            <div class="weui-media-box__hd"><img :src="item.author.avatar_url" alt="" class="weui-media-box__thumb">
                             </div>
                             <div class="weui-media-box weui-media-box_text">
                                 <h4 class="weui-media-box__title">{{item.title}}</h4>
-                                <p class="weui-media-box__desc">{{item.summary}}</p>
+                                 <p class="weui-media-box__desc">{{item.content}}</p> 
+								<!-- <p class="weui-media-box__desc" v-html="item.content"></p> -->
+								
                             </div>
                         </div>
                         <ul class="weui-media-box__info">
                             <li class="weui-media-box__info__meta">{{item.aid | authorFilters}}</li>
-                            <li class="weui-media-box__info__meta">{{item.published | dataTimeFilters }}</li>
+                            <li class="weui-media-box__info__meta">{{item.create_at}}</li>
                             <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{item.keywords}}</li>
                         </ul>
                 </div>
@@ -73,16 +75,17 @@
 	  			//console.log(this.$route.query.ID)
 	  			this.$dialog.loading.open('很快加载好了');
 		  		if(this.$route.query.ID){
-		  			this.getHttpApi(_url+'PageApi/getNewsList'+'/id/'+this.$route.query.ID).then((data) => {
+		  			this.getHttpApi(_url+'cnodeApi/gettopics'+'/id/'+this.$route.query.ID).then((data) => {
 	  					this.$dialog.loading.close();
 	  					this.newsArticleList = data;
 	  				},(error) => {
 	          			console.log(error);
 	       			});
 		  		}else{
-		  			this.getHttpApi(_url+'PageApi/getNewsList').then((data) => {
+		  			this.getHttpApi(_url+'cnodeApi/gettopics').then((data) => {
 	  					this.$dialog.loading.close();
-	  					this.newsArticleList = data;
+						  this.newsArticleList = data.data;
+						  	console.log(this.newsArticleList);
 	  				},(error) => {
 	          			console.log(error);
 	       			});
