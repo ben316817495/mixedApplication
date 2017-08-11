@@ -3493,5 +3493,8 @@ body,
   position: relative;
 }
 .mainView {
-  padding-top: 40px;
+  padding: 40px 0;
+}
+.articleList .articleList_lsit {
+  padding: 10px 0 70px 0;
 }

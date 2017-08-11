@@ -7,7 +7,7 @@
         </div> 
         -->
         
-		<div class="page__bd">
+		<div class="page__bd articleList_lsit">
 			<div class="weui-panel">
             <div class="weui-panel__hd">{{page.titleName}}列表</div>
             <div class="weui-panel__bd">
