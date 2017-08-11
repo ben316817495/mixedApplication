@@ -22,7 +22,9 @@
 	                <section v-html="newsArticleCont.content">
 	                	<!-- {{newsArticleCont.content | textContfilter}} -->
 	                </section>
-	                <!-- <contactMe></contactMe> -->
+	                
+	                <replies v-bind:repliesList="repliesList"></replies>
+
 	            </section>
 	        </article>
 	    </div>
@@ -31,13 +33,14 @@
 
 <script>
 	import http from '@/assets/js/http.js';
-	//import contactMe from '@/components/public/contactMe'
+	import replies from '@/components/generalArticle/replies'
 
 
 	export default {
-	//	components:{contactMe},
+		components:{replies},
 	    data() {
 	      return {
+	      	repliesList:[],
 	      	toastLoadingShow:false,
 	      	newsArticleCont:{},
 	      }
@@ -64,6 +67,8 @@
 	  		 		this.$dialog.loading.close();
 	  		 		console.log(data)
   					this.newsArticleCont = data.data;
+  					this.repliesList = data.data.replies;
+  					console.log(this.repliesList)
   				},(error) => {
           			console.log(error);
        			});

@@ -7,22 +7,6 @@
 	                <img :src="item.pic">
 	            </a>
 	        </yd-slider-item>  
-
-	         <!-- <yd-slider-item >
-	            <a>
-	                <img src="../../assets/img/banner2.jpg">
-	            </a>
-	        </yd-slider-item>
-
-			<yd-slider-item >
-	            <a>
-	                <img src="../../assets/img/banner1.jpg">
-	            </a>
-	        </yd-slider-item> -->
-
-	       
-	        
-	        
 	    </yd-slider>
 	  </yd-flexbox>
 	</div>

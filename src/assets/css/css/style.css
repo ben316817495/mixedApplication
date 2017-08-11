@@ -3528,3 +3528,6 @@ body,
 .articleList .articleList_lsit {
   padding: 10px 0 70px 0;
 }
+.replies .weui-form-preview__bd {
+  text-align: left;
+}
