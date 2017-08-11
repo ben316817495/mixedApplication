@@ -571,7 +571,9 @@ body, .page {
 		.weui-media-box__hd{
 			width: 70px;
     		height: 70px;
-    		line-height: 90px;
+            line-height: 90px;
+            border-radius: 10px;
+            overflow: hidden;
     		
     		 display: table-cell;
     		 img{
@@ -583,9 +585,13 @@ body, .page {
 		}
 		.weui-media-box__info{
 			margin-top: 0;
-			padding:10px 15px;
+            padding:10px 15px;
+            
 		}
 		.weui-media-box{
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
 			padding: 0 15px;
 		}
         .weui-media-box.weui-media-box_text{
@@ -732,7 +738,21 @@ body, .page {
     background-image:url(../../../assets/img/loginImg2.jpg);
 }
 
+.m-navbar{
+    height:40px !important;
 
+}
+.navbar-center{
+    height:40px !important;
+    line-height: 40px;
+}
+// .navbar-center-box .navbar-center .center-title {
+//     font-size: 14px !important;
+// }
+
+.slider-pagination>.slider-pagination-item.slider-pagination-item-active {
+    background-color: @login_inputBox_base !important;
+}
  .iconfont[class*=" icon-"]:before, .iconfont[class^=icon-]:before {
                    font-family:"iconfont" !important;
                     font-size: inherit;
@@ -993,14 +1013,14 @@ body, .page {
           height: 100px;
           top:145px;
           left:219px;
-           opacity: 0;
+          opacity: 0;
           position: absolute;
           background-image:url(../../../assets/img/fragment_right.png);
           background-repeat:no-repeat;
-        background-position-x: center;
-        background-size: 99px;    
-        animation:fragment_right 2s ease-out 4.5s;
-        animation-fill-mode: forwards;
+          background-position-x: center;
+          background-size: 99px;    
+          animation:fragment_right 2s ease-out 4.5s;
+          animation-fill-mode: forwards;
         }
 }
 
@@ -1052,13 +1072,10 @@ body, .page {
     // overflow: hidden; 
 }
 
+.mainView{
+    padding-top:40px;
+}
 
-    .tabbar-txt{
-        font-size: 14px !important;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-    }
 
 
 

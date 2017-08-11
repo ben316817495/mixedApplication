@@ -2984,6 +2984,8 @@ body,
   width: 70px;
   height: 70px;
   line-height: 90px;
+  border-radius: 10px;
+  overflow: hidden;
   display: table-cell;
 }
 .articleList .newActList .weui-media-box__hd img,
@@ -3002,6 +3004,9 @@ body,
 .articleList .newActList .weui-media-box,
 .searchList .newActList .weui-media-box,
 .PublicList .newActList .weui-media-box {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
   padding: 0 15px;
 }
 .articleList .newActList .weui-media-box.weui-media-box_text,
@@ -3099,6 +3104,16 @@ body,
   background-repeat: repeat-y;
   background-size: 100%;
   background-image: url(../../../assets/img/loginImg2.jpg);
+}
+.m-navbar {
+  height: 40px !important;
+}
+.navbar-center {
+  height: 40px !important;
+  line-height: 40px;
+}
+.slider-pagination > .slider-pagination-item.slider-pagination-item-active {
+  background-color: #74c5af !important;
 }
 .iconfont[class*=" icon-"]:before,
 .iconfont[class^=icon-]:before {
@@ -3477,9 +3492,6 @@ body,
   height: 100%;
   position: relative;
 }
-.tabbar-txt {
-  font-size: 14px !important;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+.mainView {
+  padding-top: 40px;
 }

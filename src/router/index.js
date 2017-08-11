@@ -108,6 +108,9 @@ export default new Router({
               {path: '/index/indexPage',name: '首页',component: function(resolve){
                   require(['@/components/theNewPage/index/indexPage'],resolve);
               }},
+              {path: '/index/listPageOfArticle',name: '资讯文章列表',component: function(resolve){
+                  require(['@/components/generalArticle/articleList'],resolve);
+              }},
       ]},
       
 
