@@ -5,9 +5,16 @@
 	        <p class="page__desc">文章</p>
 	    </div> -->
 	    <div class="titleImg">
-	          <img src="../../assets/img/pic_article.png" alt="">
+	          <img src="../../assets/img/top1.jpg" alt="">
 	    </div>
-		<div class="page__bd">
+
+		<div class="authorLine">
+			<div class="authorLine_name">本文作者：{{newsArticleCont.author.loginname}}</div>
+			<div class="authorLine_img">
+				<img :src="newsArticleCont.author.avatar_url">
+			</div>
+		</div>
+		<div class="page__bd articlePagecon">
 	        <article class="weui-article">
 	            <h1>{{newsArticleCont.title}}</h1>
 	            <p class="subtitle">发布日期：{{newsArticleCont.published | dataTimeFilters}}</p>
@@ -15,7 +22,7 @@
 	                <section v-html="newsArticleCont.content">
 	                	<!-- {{newsArticleCont.content | textContfilter}} -->
 	                </section>
-	                <contactMe></contactMe>
+	                <!-- <contactMe></contactMe> -->
 	            </section>
 	        </article>
 	    </div>
@@ -24,11 +31,11 @@
 
 <script>
 	import http from '@/assets/js/http.js';
-	import contactMe from '@/components/public/contactMe'
+	//import contactMe from '@/components/public/contactMe'
 
 
 	export default {
-		components:{contactMe},
+	//	components:{contactMe},
 	    data() {
 	      return {
 	      	toastLoadingShow:false,

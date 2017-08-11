@@ -3048,8 +3048,37 @@ body,
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
+.articlePage {
+  padding-bottom: 60px;
+}
 .articlePage .titleImg img {
   max-width: 100%;
+}
+.articlePage .authorLine {
+  position: relative;
+}
+.articlePage .authorLine_name {
+  top: 10px;
+  left: 120px;
+  color: #ccc;
+  position: absolute;
+}
+.articlePage .authorLine_img {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #fff;
+  top: -40px;
+  left: 10px;
+  position: absolute;
+}
+.articlePage .authorLine_img img {
+  max-width: 100%;
+}
+.articlePage .articlePagecon {
+  padding-top: 60px;
 }
 .articlePage .subtitle {
   color: #cecece;

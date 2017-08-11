@@ -23,9 +23,11 @@
                             </div>
                         </div>
                         <ul class="weui-media-box__info">
-                            <li class="weui-media-box__info__meta">{{item.aid | authorFilters}}</li>
+                            <!-- <li class="weui-media-box__info__meta">{{item.aid | authorFilters}}</li> -->
+							
                             <li class="weui-media-box__info__meta">{{item.create_at}}</li>
-                            <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{item.keywords}}</li>
+                            <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{item.tab}}</li>
+							<li class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{item.author.loginname}}</li>
                         </ul>
                 </div>
             </div>
