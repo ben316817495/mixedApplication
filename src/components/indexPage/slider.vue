@@ -2,13 +2,13 @@
 	<div class="sliderPage">
 	<yd-flexbox>
 		<yd-slider>
-	       <!--   <yd-slider-item v-for="item in banner">
+	          <yd-slider-item v-for="item in banner">
 	            <a>
 	                <img :src="item.pic">
 	            </a>
-	        </yd-slider-item>  -->
+	        </yd-slider-item>  
 
-	         <yd-slider-item >
+	         <!-- <yd-slider-item >
 	            <a>
 	                <img src="../../assets/img/banner2.jpg">
 	            </a>
@@ -18,7 +18,7 @@
 	            <a>
 	                <img src="../../assets/img/banner1.jpg">
 	            </a>
-	        </yd-slider-item>
+	        </yd-slider-item> -->
 
 	       
 	        
@@ -42,7 +42,7 @@
 	  },//mounted
 	  methods:{	 
 	  		getBanner(){
-  			 this.$http.get(_url).then(response => {
+  			 this.$http.get(_url+'banner').then(response => {
 				    // get body data
 				    this.banner = response.body.banners;
 				    //console.log(this.banner)
