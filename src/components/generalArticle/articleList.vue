@@ -14,7 +14,7 @@
 
             	
      
-		               <div  class="newActList" v-for="item in newsArticleList" @click="goToTheArticle(item)">
+		          <!--      <div  class="newActList" v-for="item in newsArticleList" @click="goToTheArticle(item)">
 		                        <div class="weui-media-box weui-media-box_appmsg ">
 		                            <div class="weui-media-box__hd"><img :src="item.author.avatar_url" alt="" class="weui-media-box__thumb">
 		                            </div>
@@ -34,7 +34,7 @@
 
 		                        </ul>
 		               </div  >
-
+ -->
     				       
 
             <yd-infinitescroll :on-infinite="scrollLoadList" ref="infinitescrollDemo">
@@ -111,7 +111,7 @@
 	  					this.newsArticleList = data;
 
 	  					//页码 ++；
-	  					this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.finishLoad');
+	  					//this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.finishLoad');
 	  					this.page.pageVal++;
 	  					console.log(this.page.pageVal)
 	  				},(error) => {
@@ -124,7 +124,7 @@
 						  	console.log(this.newsArticleList);
 
 						  	//页码 ++；
-						this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.finishLoad');
+						//this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.finishLoad');
 	  					this.page.pageVal++;
 	  					console.log(this.page.pageVal);
 
@@ -141,10 +141,19 @@
 
 	  		scrollLoadList(){
 	  				this.getHttpApi('http://localhost:3000/cnodeApi/gettopics'+'?page='+this.page.pageVal).then((data) => {
-	  						console.log(data)
-	  						// if(){
+	  						console.log(data.data)
+	  						 if(data.data.length >0){
+	  						 	
 
-	  						// }
+	  						 	 for(var i=0;i<data.data.length;i++){
+		                            this.newsArticleList.push(data.data[i]);
+		                        }
+		                        this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.finishLoad');
+                    			this.page.pageVal++;
+	  						 }else{
+	  						 	 this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.loadedDone');
+                        		return;
+	  						 }
 
 	  				},(error) => {
 	          			console.log(error);
