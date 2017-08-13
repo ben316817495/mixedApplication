@@ -2987,7 +2987,7 @@ body,
   border-radius: 10px;
   overflow: hidden;
   position: relative;
-  border-top: 1px solid #e5e5e5;
+  border: 1px solid #e5e5e5;
   display: table-cell;
 }
 .articleList .newActList .weui-media-box__hd img,
