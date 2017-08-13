@@ -3537,6 +3537,29 @@ body,
   padding: 3px 5px;
   background-color: #74c5af;
 }
+.articleList .newActList .list-img {
+  width: 75px !important;
+  height: 75px !important;
+  overflow: hidden;
+  border-radius: 10px !important;
+  border: 1px solid #e5e5e5 !important;
+  padding: 0 !important;
+}
+.articleList .newActList .list-img img {
+  margin-top: 0;
+}
+.articleList .newActList .list-mes {
+  flex: 1;
+  overflow: hidden;
+}
+.articleList .newActList .list-mes .list-title span {
+  width: 100% !important;
+  -webkit-line-clamp: 1 !important;
+  white-space: nowrap!important;
+  text-overflow: ellipsis!important;
+  -o-text-overflow: ellipsis!important;
+  overflow: hidden!important;
+}
 .replies .repliesweui-panel {
   background-color: transparent !important;
 }

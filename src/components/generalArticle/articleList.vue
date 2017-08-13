@@ -12,48 +12,54 @@
             <div class="weui-panel__hd">{{page.titleName}}列表</div>
             <div class="weui-panel__bd">
 
-            <!-- <yd-infinitescroll :on-infinite="scrollLoadList" ref="infinitescrollDemo"> -->
+            	
+     
+		               <div  class="newActList" v-for="item in newsArticleList" @click="goToTheArticle(item)">
+		                        <div class="weui-media-box weui-media-box_appmsg ">
+		                            <div class="weui-media-box__hd"><img :src="item.author.avatar_url" alt="" class="weui-media-box__thumb">
+		                            </div>
+		                            <div class="weui-media-box weui-media-box_text">
+		                                <h4 class="weui-media-box__title">{{item.title}}</h4>
+		                                 <p class="weui-media-box__desc">{{item.content}}</p> 
+										
+		                            </div>
+		                        </div>
+		                        <ul class="weui-media-box__info">
+									
+		                            <li class="weui-media-box__info__meta">{{item.create_at}}</li>
+									<li class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{item.author.loginname}}</li>
+		                            <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">
+		                            	<yd-badge shape="square" type="unified">{{item.tab | messType}}</yd-badge>
+		                            </li>
 
-                <div class="newActList" v-for="item in newsArticleList" @click="goToTheArticle(item)">
-                        <div class="weui-media-box weui-media-box_appmsg ">
-                            <div class="weui-media-box__hd"><img :src="item.author.avatar_url" alt="" class="weui-media-box__thumb">
-                            </div>
-                            <div class="weui-media-box weui-media-box_text">
-                                <h4 class="weui-media-box__title">{{item.title}}</h4>
-                                 <p class="weui-media-box__desc">{{item.content}}</p> 
-								
-                            </div>
-                        </div>
-                        <ul class="weui-media-box__info">
-							
-                            <li class="weui-media-box__info__meta">{{item.create_at}}</li>
-							<li class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{item.author.loginname}}</li>
-                            <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">
-                            	<yd-badge shape="square" type="unified">{{item.tab | messType}}</yd-badge>
-                            </li>
+		                        </ul>
+		               </div  >
 
-                        </ul>
-                </div>
+    				       
 
-               <!--  <yd-list theme="3" > 
-		        <yd-list-item v-for="item in newsArticleList">
-		            <img slot="img" :src="item.img">
-		            <span slot="title">{{item.title}}</span>
-		            <yd-list-other slot="other">
-		                <div>
-		                    <span class="list-price"><em>¥</em>{{item.price}}</span>
-		                    <span class="list-del-price">¥{{item.w_price}}</span>
-		                </div>
-		                <div>content</div>
-		            </yd-list-other>
-		        </yd-list-item>
+            <yd-infinitescroll :on-infinite="scrollLoadList" ref="infinitescrollDemo">
+
+             
+
+                <yd-list theme="4" slot="list" > 
+			        <yd-list-item v-for="item in newsArticleList" @click="goToTheArticle(item)" class="newActList">
+			            <img slot="img" :src="item.author.avatar_url">
+			            <!-- <div class="" >{{item.title}}</div> -->
+			             <h4 class="weui-media-box__title" slot="title">{{item.title}}</h4>
+			            <yd-list-other slot="other">
+			                <div class="weui-media-box__desc">
+			                   {{item.content}}
+			                </div>
+			                <!-- <div></div> -->
+			            </yd-list-other>
+			        </yd-list-item>
     			</yd-list>
 
 		        <span slot="doneTip">啦啦啦，啦啦啦，没有数据啦~~</span>
 		        <img slot="loadingTip" src="http://static.ydcss.com/uploads/ydui/loading/loading10.svg"/>
 
                 </yd-infinitescroll>
- -->
+
             </div>
             
         </div>
@@ -100,14 +106,14 @@
 	  			//console.log(this.$route.query.ID)
 	  			this.$dialog.loading.open('很快加载好了');
 		  		if(this.$route.query.ID){
-		  			this.getHttpApi(_url+'cnodeApi/gettopics'+'/id/'+this.$route.query.ID).then((data) => {
+		  			this.getHttpApi(_url+'cnodeApi/gettopics'+'?id='+this.$route.query.ID).then((data) => {
 	  					this.$dialog.loading.close();
 	  					this.newsArticleList = data;
 
 	  					//页码 ++；
 	  					this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.finishLoad');
-	  					this.pageVal++;
-	  					console.log(this.pageVal)
+	  					this.page.pageVal++;
+	  					console.log(this.page.pageVal)
 	  				},(error) => {
 	          			console.log(error);
 	       			});
@@ -119,8 +125,8 @@
 
 						  	//页码 ++；
 						this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.finishLoad');
-	  					this.pageVal++;
-	  					console.log(this.pageVal);
+	  					this.page.pageVal++;
+	  					console.log(this.page.pageVal);
 
 	  				},(error) => {
 	          			console.log(error);
@@ -134,7 +140,7 @@
 	  		},//goToTheArticle
 
 	  		scrollLoadList(){
-	  				this.getHttpApi('http://localhost:3000/cnodeApi/gettopics'+'/page/'+this.page.pageVal).then((data) => {
+	  				this.getHttpApi('http://localhost:3000/cnodeApi/gettopics'+'?page='+this.page.pageVal).then((data) => {
 	  						console.log(data)
 	  						// if(){
 
