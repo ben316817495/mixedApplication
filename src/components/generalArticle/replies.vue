@@ -6,7 +6,7 @@
         </div>
 
         <div class="weui-panel weui-panel_access repliesweui-panel">
-            <div class="weui-panel__hd repliesTitle">文章回复共 {{repliesList_cont}} 条</div>
+            <div class="weui-panel__hd repliesTitle">文章回复共 <yd-badge>{{repliesList_cont}}</yd-badge> 条</div>
             <div class="weui-panel__bd">
               
 

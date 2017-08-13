@@ -11,6 +11,9 @@
 			<div class="weui-panel">
             <div class="weui-panel__hd">{{page.titleName}}列表</div>
             <div class="weui-panel__bd">
+
+            <!-- <yd-infinitescroll :on-infinite="scrollLoadList" ref="infinitescrollDemo"> -->
+
                 <div class="newActList" v-for="item in newsArticleList" @click="goToTheArticle(item)">
                         <div class="weui-media-box weui-media-box_appmsg ">
                             <div class="weui-media-box__hd"><img :src="item.author.avatar_url" alt="" class="weui-media-box__thumb">
@@ -18,19 +21,39 @@
                             <div class="weui-media-box weui-media-box_text">
                                 <h4 class="weui-media-box__title">{{item.title}}</h4>
                                  <p class="weui-media-box__desc">{{item.content}}</p> 
-								<!-- <p class="weui-media-box__desc" v-html="item.content"></p> -->
 								
                             </div>
                         </div>
                         <ul class="weui-media-box__info">
-                            <!-- <li class="weui-media-box__info__meta">{{item.aid | authorFilters}}</li> -->
 							
                             <li class="weui-media-box__info__meta">{{item.create_at}}</li>
 							<li class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{item.author.loginname}}</li>
-                            <li class="weui-media-box__info__meta weui-media-box__info__meta_extra"><span class="messType">{{item.tab | messType}}</span></li>
+                            <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">
+                            	<yd-badge shape="square" type="unified">{{item.tab | messType}}</yd-badge>
+                            </li>
 
                         </ul>
                 </div>
+
+               <!--  <yd-list theme="3" > 
+		        <yd-list-item v-for="item in newsArticleList">
+		            <img slot="img" :src="item.img">
+		            <span slot="title">{{item.title}}</span>
+		            <yd-list-other slot="other">
+		                <div>
+		                    <span class="list-price"><em>¥</em>{{item.price}}</span>
+		                    <span class="list-del-price">¥{{item.w_price}}</span>
+		                </div>
+		                <div>content</div>
+		            </yd-list-other>
+		        </yd-list-item>
+    			</yd-list>
+
+		        <span slot="doneTip">啦啦啦，啦啦啦，没有数据啦~~</span>
+		        <img slot="loadingTip" src="http://static.ydcss.com/uploads/ydui/loading/loading10.svg"/>
+
+                </yd-infinitescroll>
+ -->
             </div>
             
         </div>
@@ -46,8 +69,11 @@
 	      return {
 	      	page:{
 	      	  titleName:this.$route.name,
+	      	  pageVal:1,
+	      	  pageListVal:20,
 	      	},
-	      	newsArticleList:'',
+	      	newsArticleList:{},
+
 	      }
 	  },//data()
 	   mounted:function () {
@@ -77,6 +103,11 @@
 		  			this.getHttpApi(_url+'cnodeApi/gettopics'+'/id/'+this.$route.query.ID).then((data) => {
 	  					this.$dialog.loading.close();
 	  					this.newsArticleList = data;
+
+	  					//页码 ++；
+	  					this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.finishLoad');
+	  					this.pageVal++;
+	  					console.log(this.pageVal)
 	  				},(error) => {
 	          			console.log(error);
 	       			});
@@ -85,6 +116,12 @@
 	  					this.$dialog.loading.close();
 						  this.newsArticleList = data.data;
 						  	console.log(this.newsArticleList);
+
+						  	//页码 ++；
+						this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.finishLoad');
+	  					this.pageVal++;
+	  					console.log(this.pageVal);
+
 	  				},(error) => {
 	          			console.log(error);
 	       			});
@@ -95,6 +132,18 @@
 	  			//console.log(item);
 	  			this.$router.push({path:'/index/articleListPage',query:{ID:item.id}});
 	  		},//goToTheArticle
+
+	  		scrollLoadList(){
+	  				this.getHttpApi('http://localhost:3000/cnodeApi/gettopics'+'/page/'+this.page.pageVal).then((data) => {
+	  						console.log(data)
+	  						// if(){
+
+	  						// }
+
+	  				},(error) => {
+	          			console.log(error);
+	       			});
+	  		},//scrollLoadList
 	  },//methods
     mixins: [http]
 

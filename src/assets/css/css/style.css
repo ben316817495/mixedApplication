@@ -3135,6 +3135,10 @@ body,
   background-size: 100%;
   background-image: url(../../../assets/img/loginImg2.jpg);
 }
+.badge-unified {
+  background-color: #74c5af !important;
+  color: #b2b2b2;
+}
 .m-navbar {
   height: 40px !important;
 }

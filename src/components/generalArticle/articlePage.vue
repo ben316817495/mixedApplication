@@ -74,6 +74,7 @@
        			});
 	  		 }
 	  	},//getTheArticle
+	  
 	  },////methods
       mixins: [http]
 	}
