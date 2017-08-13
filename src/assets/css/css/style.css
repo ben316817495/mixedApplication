@@ -3548,6 +3548,12 @@ body,
 .articleList .newActList .list-img img {
   margin-top: 0;
 }
+.articleList .newActList .list-other {
+  display: block;
+}
+.articleList .newActList .list-other .weui-media-box__info {
+  padding: 5px;
+}
 .articleList .newActList .list-mes {
   flex: 1;
   overflow: hidden;

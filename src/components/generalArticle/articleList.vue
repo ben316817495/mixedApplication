@@ -14,43 +14,33 @@
 
             	
      
-		          <!--      <div  class="newActList" v-for="item in newsArticleList" @click="goToTheArticle(item)">
-		                        <div class="weui-media-box weui-media-box_appmsg ">
-		                            <div class="weui-media-box__hd"><img :src="item.author.avatar_url" alt="" class="weui-media-box__thumb">
-		                            </div>
-		                            <div class="weui-media-box weui-media-box_text">
-		                                <h4 class="weui-media-box__title">{{item.title}}</h4>
-		                                 <p class="weui-media-box__desc">{{item.content}}</p> 
-										
-		                            </div>
-		                        </div>
-		                        <ul class="weui-media-box__info">
-									
-		                            <li class="weui-media-box__info__meta">{{item.create_at}}</li>
-									<li class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{item.author.loginname}}</li>
-		                            <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">
-		                            	<yd-badge shape="square" type="unified">{{item.tab | messType}}</yd-badge>
-		                            </li>
 
-		                        </ul>
-		               </div  >
- -->
-    				       
-
+ 
             <yd-infinitescroll :on-infinite="scrollLoadList" ref="infinitescrollDemo">
 
              
 
                 <yd-list theme="4" slot="list" > 
-			        <yd-list-item v-for="item in newsArticleList" @click="goToTheArticle(item)" class="newActList">
+			        <yd-list-item v-for="item in newsArticleList" type="link" :href="{path:'/index/articleListPage',query:{ID:item.id}}" class="newActList">
 			            <img slot="img" :src="item.author.avatar_url">
-			            <!-- <div class="" >{{item.title}}</div> -->
 			             <h4 class="weui-media-box__title" slot="title">{{item.title}}</h4>
 			            <yd-list-other slot="other">
 			                <div class="weui-media-box__desc">
 			                   {{item.content}}
 			                </div>
-			                <!-- <div></div> -->
+			                <div  class="weui-media-box__desc">
+			                	<ul class="weui-media-box__info">
+		                            <li class="weui-media-box__info__meta">
+		                            	<i class="iconfont icon-countdown"></i> {{item.create_at | changeTime}}
+		                            </li>
+									<li class="weui-media-box__info__meta weui-media-box__info__meta_extra">
+										<i class="iconfont icon-profile"></i> {{item.author.loginname}}
+									</li>
+		                            <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">
+		                            	<yd-badge shape="square" >{{item.tab | messType}}</yd-badge>
+		                            </li>
+		                        </ul>
+			                </div>
 			            </yd-list-other>
 			        </yd-list-item>
     			</yd-list>
@@ -80,6 +70,8 @@
 	      	},
 	      	newsArticleList:{},
 
+	      
+
 	      }
 	  },//data()
 	   mounted:function () {
@@ -100,6 +92,17 @@
 
 	  		}
 	  	},//messType
+	  	'changeTime':(val)=>{
+	  		var date = new Date(val)
+			let year = date.getFullYear(),
+			      month = date.getMonth() + 1,
+			      day = date.getDate();
+
+			month = `${month>9?'':''}${month}`,
+			day = `${day>9?'':''}${day}`;
+
+			return `${year}-${month}-${day}`;
+	  	},//changeTime
 	  },//filters
 	  methods:{	 
 	  		getArticleList(){
@@ -140,7 +143,7 @@
 	  		},//goToTheArticle
 
 	  		scrollLoadList(){
-	  				this.getHttpApi('http://localhost:3000/cnodeApi/gettopics'+'?page='+this.page.pageVal).then((data) => {
+	  				this.getHttpApi(_url+'cnodeApi/gettopics'+'?page='+this.page.pageVal).then((data) => {
 	  						console.log(data.data)
 	  						 if(data.data.length >0){
 	  						 	
