@@ -3528,6 +3528,37 @@ body,
 .articleList .articleList_lsit {
   padding: 10px 0 70px 0;
 }
+.articleList .messType {
+  color: #fff;
+  padding: 3px 5px;
+  background-color: #74c5af;
+}
+.replies .repliesweui-panel {
+  background-color: transparent !important;
+}
+.replies .repliesweui-panel .repliesTitle {
+  background-color: #ffffff;
+}
+.replies .weui-form-preview__item {
+  display: flex;
+}
+.replies .weui-form-preview__item .replies_imgHead {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid #f5f5f5;
+  margin-right: 3px;
+}
+.replies .weui-form-preview__item .replies_imgHead img {
+  max-width: 100%;
+}
+.replies .tipsText {
+  background-color: #f5f5f5;
+}
 .replies .weui-form-preview__bd {
   text-align: left;
+}
+.replies .weui-form-preview {
+  margin-top: 10px;
 }

@@ -1109,14 +1109,49 @@ body, .page {
     .articleList_lsit{
         padding:10px 0 70px 0;
     }
+    .messType{
+         color:#fff;
+         padding:3px 5px;
+        background-color:@login_inputBox_base; 
+    }
 }
 
+
 .replies{
+    .repliesweui-panel{
+             background-color: transparent !important;
+             .repliesTitle{
+                background-color:#ffffff;
+
+             }
+    }
+    .weui-form-preview__item{
+        display: flex;
+        .replies_imgHead{
+            width: 40px;
+            height: 40px;
+            overflow: hidden;
+            border-radius: 50%;
+            border:3px solid #f5f5f5;
+            margin-right: 3px;
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+    .tipsText{
+        background-color: #f5f5f5;
+    }
+    
     .weui-form-preview__label{
         
     }
     .weui-form-preview__bd{
             text-align: left;
+    }
+    .weui-form-preview{
+        margin-top: 10px;
+       
     }
 }
 

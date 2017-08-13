@@ -26,8 +26,9 @@
                             <!-- <li class="weui-media-box__info__meta">{{item.aid | authorFilters}}</li> -->
 							
                             <li class="weui-media-box__info__meta">{{item.create_at}}</li>
-                            <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{item.tab}}</li>
 							<li class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{item.author.loginname}}</li>
+                            <li class="weui-media-box__info__meta weui-media-box__info__meta_extra"><span class="messType">{{item.tab | messType}}</span></li>
+
                         </ul>
                 </div>
             </div>
@@ -53,24 +54,20 @@
 	   	this.getArticleList()
 	  },//mounted
 	  filters:{
-	  	'dataTimeFilters':(val)=>{
-	  		// let newDate = new Date();
-	  		// let timeVal = parseInt(val)
-	  		// //return newDate.toLocaleString(timeVal)
-	  		// return newDate.toLocaleDateString(timeVal)
-	  		 var myDate = new Date(val*1000);
-            var year = myDate.getFullYear();
-            var month = myDate.getMonth() + 1;
-            var day = myDate.getDate();
-            return year + '-' + month + '-' + day;
-	  	},//'dataTimeFilters'
-	  	'authorFilters':(val)=>{
-	  		if(val){
-	  			return '作者原创'
-	  		}else{
-	  			return '转载文章'
+	  	'messType':(val)=>{
+	  		switch(val){
+	  			case 'ask':
+	  				return '问答';
+	  			break;
+	  			case 'share':
+	  				return '分享';
+	  			break;
+	  			default:
+	  				return val;
+	  			break;
+
 	  		}
-	  	},//'authorFilters'
+	  	},//messType
 	  },//filters
 	  methods:{	 
 	  		getArticleList(){
