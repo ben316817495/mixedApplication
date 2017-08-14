@@ -3554,7 +3554,7 @@ body,
   display: block;
 }
 .articleList .newActList .list-other .weui-media-box__info {
-  padding: 5px;
+  padding: 10px 0 0 0;
 }
 .articleList .newActList .list-mes {
   flex: 1;
