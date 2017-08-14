@@ -16,7 +16,7 @@
                 </div>
                 
                 <div class="inputBottom_button">
-                    <a class="weui-btn weui-btn_logincolor" href="javascript:">登陆</a>    
+                    <a class="weui-btn weui-btn_logincolor" @click="gotoUrl('/index')">登陆</a>    
                 </div>
 
                 <div class="inputBottom_textLine">
@@ -30,3 +30,15 @@
             </div>
     </div>
 </template>
+
+
+
+<script>
+export default {
+  methods:{
+    gotoUrl(val){
+       this.$router.push({path:val});  
+    },
+  },//methods
+}
+</script>
