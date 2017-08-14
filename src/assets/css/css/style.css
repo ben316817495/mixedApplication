@@ -3641,6 +3641,7 @@ body,
 .mypage .flexUl {
   display: flex;
   padding: 20px 0 10px 0;
+  border-top: 1px dashed #e5e5e5;
 }
 .mypage .flexUl li {
   flex: 1;
