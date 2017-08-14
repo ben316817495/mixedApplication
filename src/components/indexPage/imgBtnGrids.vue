@@ -28,12 +28,13 @@
 	    data() {
 	      return {
 	      	navlist:[
-				  {nav_name:"文章社区",module:"news",type:"icon_browsers-3",id:"53"},
-				  {nav_name:"资讯文章",module:"news",type:"icon_update",id:"53",path:"/index/listPageOfArticle"},
+				  {nav_name:"cnode社区",module:"news",type:"icon_update",id:"53",path:"/index/listPageOfArticle"},
 				  {nav_name:"关于我们",module:"news",type:"icon_audience ",id:"53",path:"/index/aboutus"},
+				  {nav_name:"个人中心",module:"news",type:"icon_searching",id:"53",path:"/index/myPage"},
 				  {nav_name:"我的收藏",module:"news",type:"icon_browsers-1",id:"53"},
 				  {nav_name:"播放列表",module:"news",type:"icon_share",id:"53"},
-				  {nav_name:"个人中心",module:"news",type:"icon_searching",id:"53",path:"/index/myPage"},
+				  {nav_name:"文章社区",module:"news",type:"icon_browsers-3",id:"53"},
+				  
 			  ],
 	      }
 	  },//data()
