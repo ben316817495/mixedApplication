@@ -3622,6 +3622,7 @@ body,
 .mypage .headerBottomText {
   text-align: center;
   margin: -90px 0 0 0;
+  padding-bottom: 20px;
   background-color: #ffffff;
   position: relative;
 }
@@ -3636,4 +3637,25 @@ body,
   background-color: #ffffff;
   border-radius: 50%;
   overflow: hidden;
+}
+.mypage .flexUl {
+  display: flex;
+  padding: 20px 0 10px 0;
+}
+.mypage .flexUl li {
+  flex: 1;
+}
+.mypage .flexUl li:not(:first-child) {
+  border-left: 1px solid #e5e5e5;
+}
+.mypage .flexUl li .flexLi_title {
+  color: #cecece;
+}
+.mypage .flexUl li .flexLi_val {
+  color: #cecece;
+  font-size: 16px;
+}
+.mypage .nameText {
+  padding: 10px 0;
+  font-size: 16px;
 }

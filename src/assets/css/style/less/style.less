@@ -1233,6 +1233,7 @@ body, .page {
     .headerBottomText{
         text-align: center;
         margin: -90px 0 0 0;
+        padding-bottom:20px;
         background-color:#ffffff;
         position: relative;
         &::before{
@@ -1247,6 +1248,27 @@ body, .page {
             border-radius: 50%;
             overflow: hidden;
         }
+    }
+    .flexUl{
+        display: flex;
+        padding:20px 0 10px 0;
+        li{
+            flex:1;
+            &:not(:first-child){
+                border-left:1px solid #e5e5e5;
+            }
+            .flexLi_title{
+                color:#cecece;
+            }
+            .flexLi_val{
+                 color:#cecece;
+                font-size: 16px;
+            }
+        }
+    }
+    .nameText{
+        padding:10px 0;
+         font-size: 16px;
     }
 }
 
