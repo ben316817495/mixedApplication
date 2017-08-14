@@ -121,6 +121,9 @@ export default new Router({
               {path: '/index/myPage',name: '个人中心',component: function(resolve){
                   require(['@/components/theNewPage/myPage'],resolve);
               }},
+              {path: '/index/aboutus',name: '关于我们',component: function(resolve){
+                  require(['@/components/aboutMe/aboutPage'],resolve);
+              }},
       ]},
       
 
