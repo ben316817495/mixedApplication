@@ -2962,7 +2962,6 @@ body,
   top: 0;
   right: 0;
   height: 1px;
-  border-top: 1px solid #e5e5e5;
   color: #e5e5e5;
   transform-origin: 0 0;
   transform: scaleY(0.5);
@@ -3531,6 +3530,9 @@ body,
 }
 .articleList .articleList_lsit {
   padding: 10px 0 70px 0;
+}
+.articleList .list-item {
+  padding: 10px 0 8px !important;
 }
 .articleList .messType {
   color: #fff;
