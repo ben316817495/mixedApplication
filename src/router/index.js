@@ -59,6 +59,10 @@ import startUp from '@/components/theNewPage/start-up';
 import mainView from '@/components/theNewPage/mainView';
 import new_indexPage from '@/components/theNewPage/index/indexPage';
 
+//个人中心
+//import myPage from '@/components/theNewPage/myPage';
+
+
 
 
 
@@ -113,6 +117,9 @@ export default new Router({
               }},
               {path: '/index/articleListPage',name: '资讯文章内容',component: function(resolve){
                   require(['@/components/generalArticle/articlePage'],resolve);
+              }},
+              {path: '/index/myPage',name: '个人中心',component: function(resolve){
+                  require(['@/components/theNewPage/myPage'],resolve);
               }},
       ]},
       

@@ -3597,3 +3597,28 @@ body,
 .replies .weui-form-preview {
   margin-top: 10px;
 }
+.mypage .imgHeader {
+  position: absolute;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.mypage .imgHeader img {
+  max-width: 100%;
+}
+.mypage .headerBottomText {
+  background-color: #ffffff;
+  position: relative;
+}
+.mypage .headerBottomText::before {
+  content: '';
+  top: -34px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  overflow: hidden;
+}
