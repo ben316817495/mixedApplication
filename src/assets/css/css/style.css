@@ -3597,16 +3597,31 @@ body,
 .replies .weui-form-preview {
   margin-top: 10px;
 }
+.mypage {
+  position: relative;
+}
+.mypage .topHeaderBox {
+  width: 100%;
+  top: 0;
+  background-image: url(../../../assets/img/top2.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
 .mypage .imgHeader {
-  position: absolute;
+  position: relative;
   border: 5px solid #ffffff;
   border-radius: 50%;
   overflow: hidden;
+  z-index: 10;
+  margin: 10px auto;
+  width: 130px;
 }
 .mypage .imgHeader img {
   max-width: 100%;
 }
 .mypage .headerBottomText {
+  text-align: center;
+  margin: -90px 0 0 0;
   background-color: #ffffff;
   position: relative;
 }
