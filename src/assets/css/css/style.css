@@ -3646,7 +3646,7 @@ body,
   flex: 1;
 }
 .mypage .flexUl li:not(:first-child) {
-  border-left: 1px solid #e5e5e5;
+  border-left: 1px dashed #e5e5e5;
 }
 .mypage .flexUl li .flexLi_title {
   color: #cecece;
@@ -3658,4 +3658,7 @@ body,
 .mypage .nameText {
   padding: 10px 0;
   font-size: 16px;
+}
+.m-backtop {
+  bottom: 10% !important;
 }
