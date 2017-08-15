@@ -103,6 +103,9 @@ export default new Router({
           {path: '/readyMian/loginPage',name: '登陆界面',component: function(resolve){
             require(['@/components/theNewPage/login'],resolve);
           }},
+          {path: '/readyMian/register',name: '注册界面',component: function(resolve){
+            require(['@/components/theNewPage/register'],resolve);
+          }},
       ]},
 
      

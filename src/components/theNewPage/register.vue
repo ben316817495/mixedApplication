@@ -1,6 +1,6 @@
 
 <template>
-    <div class="loginPage">
+    <div class="loginPage register">
             <div class="bgimg"> </div>
             <div class="logoimg"></div>
             <div class="inputDevice">
@@ -13,15 +13,19 @@
                         <div class="inputBox_icon"><i class="iconfont icon-unlock2"></i></div>
                         <div class="inputBox_inputbox"><input class="inputBox_input" placeholder="请输入密码" /></div>
                     </div>
+                    <div class="inputBox_line">
+                        <div class="inputBox_icon"><i class="iconfont icon-email"></i></div>
+                        <div class="inputBox_inputbox"><input class="inputBox_input" placeholder="请输入密码" /></div>
+                    </div>
                 </div>
                 
                 <div class="inputBottom_button">
-                    <a class="weui-btn weui-btn_logincolor" @click="gotoUrl('/index')">登陆</a>    
+                    <a class="weui-btn weui-btn_logincolor" @click="gotoUrl('/index')">注册账号</a>    
                 </div>
 
                 <div class="inputBottom_textLine">
-                    <div class="textLine_left">Forgot the password?</div>
-                    <div class="textLine_right" @click="gotoUrl('/readyMian/register')">Not registered yet?</div>
+                    <div class="textLine_left"  @click="gotoUrl('/readyMian/loginPage')">已有账号？马上登陆</div>
+                    <!-- <div class="textLine_right">Not registered yet?</div> -->
                 </div>
 
             </div>
@@ -31,14 +35,12 @@
     </div>
 </template>
 
-
-
 <script>
 export default {
   methods:{
-    gotoUrl(val){
-       this.$router.push({path:val});  
-    },
-  },//methods
+        gotoUrl(val){
+        this.$router.push({path:val});  
+        },
+    },//methods
 }
 </script>

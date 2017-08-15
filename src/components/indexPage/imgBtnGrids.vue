@@ -34,7 +34,6 @@
 				  {nav_name:"我的收藏",module:"news",type:"icon_browsers-1",id:"53"},
 				  {nav_name:"播放列表",module:"news",type:"icon_share",id:"53"},
 				  {nav_name:"文章社区",module:"news",type:"icon_browsers-3",id:"53"},
-				  
 			  ],
 	      }
 	  },//data()

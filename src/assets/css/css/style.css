@@ -3283,6 +3283,14 @@ body,
 .loginPage .inputDevice .inputBottom_textLine .textLine_right {
   text-align: right;
 }
+.loginPage.register .inputBox_container {
+  height: 150px;
+  margin: 0;
+}
+.loginPage.register .logoimg {
+  margin: 20px 0 ;
+  height: 170px;
+}
 .startUp {
   /*  // .logoimg{
     //     width: 100%;
