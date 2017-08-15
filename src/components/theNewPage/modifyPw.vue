@@ -7,28 +7,28 @@
                 <div class="inputBox_container">
                     
                     <div class="inputBox_line">
-                        <div class="inputBox_icon"><i class="iconfont icon-squarecheck"></i></div>
+                        <div class="inputBox_icon"><i class="iconfont icon-unlock2"></i></div>
                         <div class="inputBox_inputbox"><input class="inputBox_input" placeholder="请输入原有密码" /></div>
                     </div>
                      
                     <div class="inputBox_line">
-                        <div class="inputBox_icon"><i class="iconfont icon-unlock2"></i></div>
+                        <div class="inputBox_icon"><i class="iconfont icon-unlock1"></i></div>
                         <div class="inputBox_inputbox"><input class="inputBox_input" placeholder="请输入新密码" /></div>
                     </div>
                    
                     <div class="inputBox_line">
-                        <div class="inputBox_icon"><i class="iconfont icon-refresh2"></i></div>
+                        <div class="inputBox_icon"><i class="iconfont icon-unlock1"></i></div>
                         <div class="inputBox_inputbox"><input class="inputBox_input" placeholder="请再次输入密码" /></div>
                     </div>
                 
                 </div>
                 
                 <div class="inputBottom_button">
-                    <a class="weui-btn weui-btn_logincolor" @click="gotoUrl('/index')">注册账号</a>    
+                    <a class="weui-btn weui-btn_logincolor" @click="gotoUrl('/index')">修改密码</a>    
                 </div>
 
                 <div class="inputBottom_textLine">
-                    <div class="textLine_left"  @click="gotoUrl('/readyMian/loginPage')">已有账号？马上登陆</div>
+                    <div class="textLine_left"  @click="gotoUrl('/index/myPage')"><i class="iconfont icon-lingcunwei"></i> 取消修改密码</div>
                     <!-- <div class="textLine_right">Not registered yet?</div> -->
                 </div>
 
