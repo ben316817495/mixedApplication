@@ -3074,7 +3074,7 @@ body,
   position: absolute;
 }
 .articlePage .authorLine_img img {
-  max-width: 100%;
+  width: 100%;
 }
 .articlePage .articlePagecon {
   padding-top: 60px;
