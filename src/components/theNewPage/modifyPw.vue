@@ -7,18 +7,18 @@
                 <div class="inputBox_container">
                     
                     <div class="inputBox_line">
-                        <div class="inputBox_icon"><i class="iconfont icon-people"></i></div>
-                        <div class="inputBox_inputbox"><input class="inputBox_input" placeholder="请输入账号" /></div>
+                        <div class="inputBox_icon"><i class="iconfont icon-squarecheck"></i></div>
+                        <div class="inputBox_inputbox"><input class="inputBox_input" placeholder="请输入原有密码" /></div>
                     </div>
                      
                     <div class="inputBox_line">
                         <div class="inputBox_icon"><i class="iconfont icon-unlock2"></i></div>
-                        <div class="inputBox_inputbox"><input class="inputBox_input" placeholder="请输入密码" /></div>
+                        <div class="inputBox_inputbox"><input class="inputBox_input" placeholder="请输入新密码" /></div>
                     </div>
                    
                     <div class="inputBox_line">
-                        <div class="inputBox_icon"><i class="iconfont icon-unlock2"></i></div>
-                        <div class="inputBox_inputbox"><input class="inputBox_input" placeholder="请输入密码" /></div>
+                        <div class="inputBox_icon"><i class="iconfont icon-refresh2"></i></div>
+                        <div class="inputBox_inputbox"><input class="inputBox_input" placeholder="请再次输入密码" /></div>
                     </div>
                 
                 </div>
