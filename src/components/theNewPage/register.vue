@@ -5,22 +5,27 @@
             <div class="logoimg"></div>
             <div class="inputDevice">
                 <div class="inputBox_container">
+                    
                     <div class="inputBox_line">
                         <div class="inputBox_icon"><i class="iconfont icon-people"></i></div>
                         <div class="inputBox_inputbox"><input class="inputBox_input" placeholder="请输入账号" /></div>
                     </div>
+                     
                      <div class="inputBox_line">
                         <div class="inputBox_icon"><i class="iconfont icon-unlock2"></i></div>
                         <div class="inputBox_inputbox"><input class="inputBox_input" placeholder="请输入密码" /></div>
                     </div>
+                   
                     <div class="inputBox_line">
                         <div class="inputBox_icon"><i class="iconfont icon-email"></i></div>
                         <div class="inputBox_inputbox"><input class="inputBox_input" placeholder="请输入邮箱" /></div>
                     </div>
+                   
                     <div class="inputBox_line">
                         <div class="inputBox_icon"><i class="iconfont icon-phone2"></i></div>
                         <div class="inputBox_inputbox"><input class="inputBox_input" placeholder="请输入电话号码" /></div>
                     </div>
+                
                 </div>
                 
                 <div class="inputBottom_button">
