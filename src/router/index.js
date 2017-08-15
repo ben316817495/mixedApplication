@@ -96,6 +96,7 @@ export default new Router({
     //     ]},
     // {path: '/articleListPage',name: '音乐列表',component: articleListPage},
     // {path: '/albumListPage',name: '专辑列表',component: albumListPage},
+    
       {path: '/',redirect: '/readyMian'},
       {path: '/readyMian',name: '启动页面',component: readyMian,children:[
           {path: '/',redirect: '/readyMian/startup'},
@@ -105,6 +106,9 @@ export default new Router({
           }},
           {path: '/readyMian/register',name: '注册界面',component: function(resolve){
             require(['@/components/theNewPage/register'],resolve);
+          }},
+          {path: '/readyMian/modifypw',name: '修改密码',component: function(resolve){
+            require(['@/components/theNewPage/modifyPw'],resolve);
           }},
       ]},
 
