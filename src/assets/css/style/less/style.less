@@ -1080,7 +1080,14 @@ body, .page {
           animation-fill-mode: forwards;
         }
 }
-
+//-webkit-
+@-webkit-keyframes logoAnimate{
+    0%{-webkit-transform:rotate(0deg);background-size: 0%;opacity: 0;background-image:url(../../../assets/img/logofull.png);}
+    1%{-webkit-transform:rotate(0deg);background-size: 0%;opacity: 1;background-image:url(../../../assets/img/logofull.png);}
+    80%{-webkit-transform:rotate(360deg);background-size: 300px;opacity: 1;background-image:url(../../../assets/img/logofull.png);}
+    90%{-webkit-transform:rotate(360deg);background-size:  300px;opacity: 1;background-image:url(../../../assets/img/logofull.png);}
+    100%{-webkit-transform:rotate(360deg);background-size:  300px;opacity: 1;background-image:url(../../../assets/img/logoq.png);}
+}
 @keyframes logoAnimate{
     0%{transform:rotate(0deg);background-size: 0%;opacity: 0;background-image:url(../../../assets/img/logofull.png);}
     1%{transform:rotate(0deg);background-size: 0%;opacity: 1;background-image:url(../../../assets/img/logofull.png);}
