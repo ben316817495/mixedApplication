@@ -62,6 +62,10 @@ import new_indexPage from '@/components/theNewPage/index/indexPage';
 //个人中心
 //import myPage from '@/components/theNewPage/myPage';
 
+//王者荣耀
+import gloryOfKings_allhero from '@/components/gloryOfKings/allHero';
+
+
 
 
 
@@ -131,6 +135,9 @@ export default new Router({
               {path: '/index/aboutus',name: '关于我们',component: function(resolve){
                   require(['@/components/aboutMe/aboutPage'],resolve);
               }},
+              {path: '/index/gloryOfKings/allHero',name: '所有英雄',component: function(resolve){
+                require(['@/components/gloryOfKings/allHero'],resolve);
+            }},
       ]},
       
 
